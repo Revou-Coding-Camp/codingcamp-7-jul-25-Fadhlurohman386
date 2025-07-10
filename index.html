@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo - Adu</title>
-
-    <!-- CSS eksternal -->
-    <link rel="stylesheet" href="\CSS\style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo - Adu</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-    <!-- hero website -->
-    <header>
-        <h1>Todo List</h1>
-    </header>
+  <div class="container">
+    <h1>📝 To-Do List Web 📝</h1>
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="What do you want to do?" required />
+      <input type="date" id="todo-date" required />
+      <button type="submit">Add Task</button>
+    </form>
 
-    <main></main>
+    <div class="controls">
+      <input type="text" id="filter-input" placeholder="Filter tasks..." />
+      <button id="delete-all">Delete All</button>
+    </div>
 
-    <footer>
-        <span>&copy; 2025 Adu. All rights reserved</span>
-    </footer>
+    <table id="todo-table">
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="todo-body">
+        <tr><td colspan="4" class="no-task">No tasks yet!</td></tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <footer>&copy;2025 Adu. All rights reserved</footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
